@@ -9,14 +9,24 @@ type ITest = {
 }
 
 class App extends Component<*, ITest, *> {
-  state: ITest
   constructor(props) {
     super(props)
     this.state = {
-      test: false,
-      bla: null
+      loading: true,
+      posts: null
     }
   }
+
+  componentWillMount = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/portoflios/', { mode: 'no-cors' })
+      const posts = await response.json()
+      this.setState({ loading: false, posts })
+    } catch (e) {
+      this.setState({ loading: false, error: true })
+    }
+  }
+
   render() {
     return (
       <div className="App">
