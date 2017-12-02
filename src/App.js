@@ -1,14 +1,16 @@
 /* @flow */
 import React, { Component } from 'react'
-import logo from './logo.svg'
+import { Header } from './components/Header'
+import { MainSection } from './components/MainSection'
+import { Footer } from './components/Footer'
+import Hero from 'grommet/components/Hero'
+import Box from 'grommet/components/Box'
+import Image from 'grommet/components/Image'
+import Card from 'grommet/components/Card'
+import Anchor from 'grommet/components/Anchor'
 import './App.css'
 
-type ITest = {
-  test: boolean,
-  bla: string | null
-}
-
-class App extends Component<*, ITest, *> {
+class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -17,26 +19,37 @@ class App extends Component<*, ITest, *> {
     }
   }
 
-  componentWillMount = async () => {
-    try {
-      const response = await fetch('http://localhost:5000/api/portoflios/', { mode: 'no-cors' })
-      const posts = await response.json()
-      this.setState({ loading: false, posts })
-    } catch (e) {
-      this.setState({ loading: false, error: true })
-    }
-  }
-
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React {this.state.test}</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Hero background={
+          <Image src='https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'
+            fit='cover'
+            full />
+          }
+          backgroundColorIndex='dark'
+          size='large'
+          style={{ minHeight: '100vh' }}>
+          <Box direction='row'
+            justify='center'
+            align='center'>
+            <Box basis='1/2'
+              align='end'
+              pad='medium' />
+            <Box basis='1/2'
+              align='start'
+              pad='medium'>
+              <Box colorIndex='grey-2-a'>
+                <Card heading='Heading'
+                  description='Hero description text.'
+                  label='label'
+                  link={<Anchor href='#'
+                    primary
+                    label='Link' />} />
+              </Box>
+            </Box>
+          </Box>
+        </Hero>
       </div>
     )
   }
