@@ -1,13 +1,12 @@
 /* @flow */
 import React, { Component } from 'react'
-import { Header } from './components/Header'
 import { MainSection } from './components/MainSection'
-import { Footer } from './components/Footer'
-import Hero from 'grommet/components/Hero'
+import AnimatedHeading from './components/Animated-Heading'
+import Paragraph from 'grommet/components/Paragraph'
 import Box from 'grommet/components/Box'
-import Image from 'grommet/components/Image'
-import Card from 'grommet/components/Card'
-import Anchor from 'grommet/components/Anchor'
+import Section from 'grommet/components/Section'
+import Article from 'grommet/components/Article'
+import Headline from 'grommet/components/Headline'
 import './App.css'
 
 class App extends Component {
@@ -21,36 +20,40 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Hero background={
-          <Image src='https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'
-            fit='cover'
-            full />
-          }
-          backgroundColorIndex='dark'
-          size='large'
-          style={{ minHeight: '100vh' }}>
-          <Box direction='row'
-            justify='center'
-            align='center'>
-            <Box basis='1/2'
-              align='end'
-              pad='medium' />
-            <Box basis='1/2'
-              align='start'
-              pad='medium'>
-              <Box colorIndex='grey-2-a'>
-                <Card heading='Heading'
-                  description='Hero description text.'
-                  label='label'
-                  link={<Anchor href='#'
-                    primary
-                    label='Link' />} />
-              </Box>
-            </Box>
-          </Box>
-        </Hero>
-      </div>
+      <Article scrollStep
+        controls>
+        <Section pad='none' >
+          <div className='web-wrapper'>
+            <div className='shadow-overlay'>
+              <div className='landing-text'>
+                <AnimatedHeading />
+                <Box align='center'>
+                  <Paragraph align='center'>
+                    Architecture and design studio that meets your needs
+                  </Paragraph>
+                </Box>
+              </div>
+            </div>
+          </div>
+        </Section>
+        <Section pad='large'
+          justify='center'
+          align='center'
+          full='vertical'
+          colorIndex='grey-4'>
+          <Headline margin='none'>
+            Section 2
+         </Headline>
+        </Section>
+        <Section pad='large'
+          justify='center'
+          align='center'
+          full='vertical'>
+          <Headline margin='none'>
+      Section 3
+    </Headline>
+        </Section>
+      </Article>
     )
   }
 }
