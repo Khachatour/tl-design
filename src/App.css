@@ -22,6 +22,10 @@
   font-size: large;
 }
 
+.grommetux-article__control {
+  margin: 10px auto !important
+}
+
 .web-wrapper {
   background: url('https://static.pexels.com/photos/14613/Life-of-Pix-free-stock-photos-blocks-sky-monument-davideragusa.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
