@@ -9,8 +9,7 @@ import Article from 'grommet/components/Article'
 import Heading from 'grommet/components/Heading'
 import Headline from 'grommet/components/Headline'
 import Card from 'grommet/components/Card'
-import Tiles from 'grommet/components/Tiles'
-import Tile from 'grommet/components/Tile'
+import Label from 'grommet/components/Label'
 import './App.css'
 
 class App extends Component {
@@ -39,36 +38,58 @@ class App extends Component {
             </div>
           </div>
         </Section>
-        <Section align='center' full='vertical'>
+        <Section>
           <Box pad='large'>
             <Heading align='center' uppercase strong tag='h2'>What we offer</Heading>
           </Box>
-          <Tiles fill>
-            <Tile>
-              <Card thumbnail='https://www.raic.org/sites/default/files/news_image/temple_web.jpg'
-                heading='Sample Heading'
-                label='Sample Label'
-                description='Sample description providing more details.' />
-            </Tile>
-            <Tile>
-              <Card thumbnail='https://www.raic.org/sites/default/files/news_image/temple_web.jpg'
-                heading='Sample Heading'
-                label='Sample Label'
-                description='Sample description providing more details.' />
-            </Tile>
-            <Tile>
-              <Card thumbnail='https://www.raic.org/sites/default/files/news_image/temple_web.jpg'
-                heading='Sample Heading'
-                label='Sample Label'
-                description='Sample description providing more details.' />
-            </Tile>
-            <Tile>
-              <Card thumbnail='https://www.raic.org/sites/default/files/news_image/temple_web.jpg'
-                heading='Sample Heading'
-                label='Sample Label'
-                description='Sample description providing more details.' />
-            </Tile>
-          </Tiles>
+          <Box direction='row'
+            justify='center'
+            align='center'>
+            <Box basis='1'
+              align='center'
+              pad='medium'>
+              <Box className='my-container'>
+                <Card heading={<Heading align='center' truncate margin='small' style={{ color: 'white' }} uppercase strong tag='h4'>Interior Design</Heading>}
+                  style={{ zIndex: 2 }}
+                  pad='large'
+                  label={<Label size='small' uppercase style={{ color: 'white' }}>design</Label>} />
+              </Box>
+            </Box>
+            <Box basis='1'
+              align='center'
+              pad='medium'>
+              <Box className='my-container'>
+                <Card heading={<Heading align='center' truncate margin='small' style={{ color: 'white' }} uppercase strong tag='h4'>Commercial territories</Heading>}
+                  style={{ zIndex: 2 }}
+                  pad='large'
+                  label={<Label size='small' uppercase style={{ color: 'white' }}>architecture</Label>} />
+              </Box>
+            </Box>
+          </Box>
+          <Box direction='row'
+            justify='center'
+            align='center'>
+            <Box basis='1'
+              align='center'
+              pad='medium'>
+              <Box className='my-container'>
+                <Card heading={<Heading align='center' truncate margin='small' style={{ color: 'white' }} uppercase strong tag='h4'>Public spaces design</Heading>}
+                  style={{ zIndex: 2 }}
+                  pad='large'
+                  label={<Label size='small' uppercase style={{ color: 'white' }}>architecture</Label>} />
+              </Box>
+            </Box>
+            <Box basis='1'
+              align='center'
+              pad='medium'>
+              <Box className='my-container'>
+                <Card heading={<Heading align='center' truncate margin='small' style={{ color: 'white' }} uppercase strong tag='h4'>exterior design</Heading>}
+                  style={{ zIndex: 2 }}
+                  pad='large'
+                  label={<Label size='small' uppercase style={{ color: 'white' }}>design</Label>} />
+              </Box>
+            </Box>
+          </Box>
         </Section>
         <Section pad='large'
           justify='center'
