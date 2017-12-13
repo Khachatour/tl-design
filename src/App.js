@@ -1,6 +1,5 @@
 /* @flow */
 import React, { Component } from 'react'
-import { MainSection } from './components/MainSection'
 import AnimatedHeading from './components/Animated-Heading'
 import Paragraph from 'grommet/components/Paragraph'
 import Box from 'grommet/components/Box'
