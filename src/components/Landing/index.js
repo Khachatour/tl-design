@@ -11,19 +11,21 @@ import './index.css'
 type ILandingProps = {}
 
 class Landing extends PureComponent<*, ILandingProps, *> {
-  render () {
+  render() {
     return (
-      <Section pad='none' >
-        <div className='web-wrapper'>
-          <div className='shadow-overlay'>
-            <div className='landing-text'>
+      <Section pad="none">
+        <div className="web-wrapper">
+          <div className="shadow-overlay">
+            <div className="landing-text">
               <AnimatedHeading />
-              <Box align='center'>
-                <Paragraph align='center'>
+              <Box align="center">
+                <Paragraph align="center">
                   <Typist avgTypingDelay={80}>
-                    {`Architecture and design studio that fucks yo${(' '.repeat(3))}`}
+                    {`Architecture and design studio that fucks yo${' '.repeat(
+                      3
+                    )}`}
                     <Typist.Backspace count={11} />
-                  meets your needs
+                    meets your needs
                   </Typist>
                 </Paragraph>
               </Box>
@@ -32,7 +34,7 @@ class Landing extends PureComponent<*, ILandingProps, *> {
         </div>
       </Section>
     )
-  }   
+  }
 }
 
 export default Landing
