@@ -27,19 +27,17 @@ if (!dev) {
 
 if (dev) {
   app.use(morgan('dev'))
-
-  router.route('/portoflios').get((req, res) => {
-    res.send('hellow from api')
-  })
-  app.get('/', (req, res) => {
-    res.send('Hello Worldination!')
-  })
-
-  app.get('/portoflios3000', (req, res) => {
-    res.send('Hello World!')
-  })
-  app.use('/api', router)
 }
+
+app.get('/', (req, res) => {
+  res.send('Hello Worldination!')
+})
+
+app.get('/portoflios3000', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.use('/api', router)
 
 const server = createServer(app)
 
