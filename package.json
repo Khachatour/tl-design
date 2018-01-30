@@ -24,6 +24,7 @@
     "react-typist": "^2.0.4"
   },
   "scripts": {
+    "dev": "nodemon ./bin/www/ && react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -38,6 +39,7 @@
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.14.11",
     "prettier": "^1.10.2"
   }
 }
