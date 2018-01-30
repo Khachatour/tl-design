@@ -31,11 +31,12 @@
     "flow": "flow"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^3.19.0",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.16.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-flowtype": "^2.41.0",
-    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-flowtype": "^2.42.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-react": "^7.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "prettier": "^1.10.2"
   }
