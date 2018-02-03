@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 const { createServer } = require('http')
-const app = require('../../server/server.js')
+const app = require('../server/server.js')
 const normalizePort = port => parseInt(port, 10)
 
 const PORT = normalizePort(process.env.PORT || 5000)

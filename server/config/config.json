@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "khachatour",
+    "password": null,
+    "database": "tl_design_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "envUsername",
+    "password": "envPassword",
+    "database": "envDB",
+    "host": "envHost",
+    "dialect": "postgres"
+  }
+}

@@ -2,12 +2,18 @@ const express = require('express')
 const compression = require('compression')
 const morgan = require('morgan')
 const path = require('path')
-const router = express.Router()
-
+const bodyParser = require('body-parser')
+const Todo = require('./models').Todo
 const app = express()
 const dev = app.get('env') !== 'production'
 
 const rootFolder = path.join(__dirname, '/../build')
+
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+)
 
 if (!dev) {
   app.disable('x-powered-by')
@@ -28,10 +34,12 @@ app.get('/', (req, res) => {
   res.send('Hello Worldination!')
 })
 
-app.get('/portoflios3000', (req, res) => {
-  res.send('Hello World!')
+app.post('/api/todos', (req, res) => {
+  return Todo.create({
+    title: req.body.title
+  })
+    .then(todo => res.status(201).send(todo))
+    .catch(error => res.status(400).send(error))
 })
-
-app.use('/api', router)
 
 module.exports = app
