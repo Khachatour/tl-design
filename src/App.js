@@ -8,11 +8,15 @@ import Heading from 'grommet/components/Heading'
 import Card from 'grommet/components/Card'
 import Label from 'grommet/components/Label'
 import Landing from './components/Landing'
-import Columns from 'grommet/components/Columns'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css'
+import './fancy-button.css'
+import './fancy-glitch.css'
 
 class App extends Component {
+  componentDidMount() {
+    require('./text-animate.js')
+  }
   render() {
     return (
       <Router>
@@ -148,16 +152,24 @@ class App extends Component {
             pad="none"
           >
             <div className="freaking-wrapper">
-              <div className="freaking-left">
-                <Heading tag="h3" margin="large">
-                  It's not the length of life its the depth of life It's not the
-                  length of life its the depth of life
-                </Heading>
+              <div className="freaking-glitch">
+                {/* <canvas id="myCanvas" /> */}
+                <header className="header">
+                  <h1 className="glitched">Read or see</h1>
+                </header>
               </div>
-              <div className="freaking-shadow">
-                <div className="freaking-shadow-title">
-                  It's not the length of life its the depth of life It's not the
-                  length of life its the depth of life
+              <div className="freaking-top-side">
+                <div className="freaking-buttons">
+                  <button className="button">
+                    Read our Blog
+                    <div className="button__horizontal" />
+                    <div className="button__vertical" />
+                  </button>
+                  <button className="button">
+                    See our Portfolio
+                    <div className="button__horizontal" />
+                    <div className="button__vertical" />
+                  </button>
                 </div>
               </div>
             </div>

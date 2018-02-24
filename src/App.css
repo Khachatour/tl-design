@@ -73,27 +73,14 @@
 
 .freaking-wrapper {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
 }
 
-.freaking-left {
-  flex: 0 1 50%;
-  min-height: 100%;
-  justify-content: center;
-  align-content: center;
-  align-self: center;
-  max-width: 50%;
-  color: #edeee9;
-  font-family: 'Georgia';
-  padding: 0.5em;
-  background-color: #3e3e40;
-}
-
 .freaking-shadow {
-  flex: 0 1 50%;
-  align-self: flex-end;
-  max-width: 50%;
+  display: flex;
+  flex: 1;
   color: #edeee9;
   font-family: 'Georgia';
   text-shadow: #3e3e40 1px 1px, #3e3e40 -0px 0px, #3e3e40 -1px 1px,
@@ -156,25 +143,29 @@
 }
 
 .freaking-shadow-title {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
   padding-left: 2rem;
-  width: 40%;
   font-weight: 600;
   line-height: 4rem;
   font-size: 3rem;
   text-align: left;
 }
 
-@media screen and (max-width: 480px) {
-  .freaking-shadow-title {
-    width: 80% !important;
-  }
+.freaking-glitch {
+  display: flex;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.freaking-top-side {
+  display: flex;
+  flex: 1;
+}
+
+.freaking-buttons {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
 }
